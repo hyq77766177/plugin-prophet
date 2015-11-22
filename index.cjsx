@@ -35,7 +35,8 @@ spotInfo = [
   __('Battle Avoid'),
   __('Air Strike'),
   __('Escort Success'),
-  __('Enemy Detected'),
+  __('Offload Resources'),
+  __('No Sign of Enemy'),
   __('Manual Selection'),
   __('Aerial Recon')
 ]
@@ -97,12 +98,12 @@ getCellInfo = (eventId, eventKind, bossCell, CellNo) ->
     return 6
   if eventId is 6
     if eventKind is 1
-      return 10
-    else if eventKind is 2
       return 11
+    else if eventKind is 2
+      return 12
   else if eventId is 7
     if eventKind is 0
-      return 12
+      return 13
   return eventId + 1
 
 getEnemyInfo = (enemyHp, enemyInfo, body, isPractice) ->
